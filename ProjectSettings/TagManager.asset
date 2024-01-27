@@ -6,6 +6,10 @@ TagManager:
   tags:
   - PanelGameOver
   - TextTimer
+  - Tuberia
+  - Cable
+  - GameManager
+  - Cables
   layers:
   - Default
   - TransparentFX
