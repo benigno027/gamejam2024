@@ -11,6 +11,7 @@ TagManager:
   - GameManager
   - Cables
   - Lives
+  - Foco
   layers:
   - Default
   - TransparentFX

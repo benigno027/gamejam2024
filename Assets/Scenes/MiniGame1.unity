@@ -168,8 +168,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 198.5283, y: 27.5535}
-  m_SizeDelta: {x: -561.6127, y: -71.6391}
+  m_AnchoredPosition: {x: 121.77336, y: 26.13211}
+  m_SizeDelta: {x: -408.1028, y: -74.4819}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &81924253
 MonoBehaviour:
@@ -183,8 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc4660a0ab591934d98913c1a00ce9d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Dificultad: 1
-  gameObjects:
+  gameObjectsButtons:
   - {fileID: 1398298142}
   - {fileID: 930372590}
   - {fileID: 763084514}
@@ -194,7 +193,8 @@ MonoBehaviour:
   - {fileID: 357482207}
   - {fileID: 711379425}
   - {fileID: 1257242226}
-  indices: 
+  IndiceSeleccionados: 
+  Recorridos: 
 --- !u!114 &81924254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,7 +247,7 @@ GameObject:
   - component: {fileID: 357482209}
   m_Layer: 5
   m_Name: Button7
-  m_TagString: Untagged
+  m_TagString: Foco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -469,7 +469,7 @@ GameObject:
   - component: {fileID: 711379427}
   m_Layer: 5
   m_Name: Button8
-  m_TagString: Untagged
+  m_TagString: Foco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -590,7 +590,7 @@ GameObject:
   - component: {fileID: 763084516}
   m_Layer: 5
   m_Name: Button3
-  m_TagString: Untagged
+  m_TagString: Foco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -711,7 +711,7 @@ GameObject:
   - component: {fileID: 930372592}
   m_Layer: 5
   m_Name: Button2
-  m_TagString: Untagged
+  m_TagString: Foco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -832,7 +832,7 @@ GameObject:
   - component: {fileID: 1257242228}
   m_Layer: 5
   m_Name: Button9
-  m_TagString: Untagged
+  m_TagString: Foco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -953,7 +953,7 @@ GameObject:
   - component: {fileID: 1302550993}
   m_Layer: 5
   m_Name: Button4
-  m_TagString: Untagged
+  m_TagString: Foco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1074,7 +1074,7 @@ GameObject:
   - component: {fileID: 1360444367}
   m_Layer: 5
   m_Name: Button5
-  m_TagString: Untagged
+  m_TagString: Foco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1195,7 +1195,7 @@ GameObject:
   - component: {fileID: 1398298144}
   m_Layer: 5
   m_Name: Button1
-  m_TagString: Untagged
+  m_TagString: Foco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1384,7 +1384,7 @@ GameObject:
   - component: {fileID: 1690293576}
   m_Layer: 5
   m_Name: Button6
-  m_TagString: Untagged
+  m_TagString: Foco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
