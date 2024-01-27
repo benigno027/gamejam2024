@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 1886575270}
   - component: {fileID: 1886575269}
   m_Layer: 0
-  m_Name: creepy-devil-dance-166764
+  m_Name: Sonido
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -467,46 +467,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3956285415108883618, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3956285415108883618, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3956285415108883618, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3956285415108883618, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3956285415108883618, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3956285415108883618, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3956285415108883618, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3956285415108883618, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4352256427760077731, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 8312e38ee06fe094d973d5ee01e06fe6, type: 3}
-    - target: {fileID: 7260576427547657718, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
-      propertyPath: m_TagString
-      value: Lives
-      objectReference: {fileID: 0}
     - target: {fileID: 7260576427861465863, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
       propertyPath: m_Name
       value: Canvas
