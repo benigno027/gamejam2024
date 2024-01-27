@@ -10,6 +10,7 @@ TagManager:
   - Cable
   - GameManager
   - Cables
+  - Lives
   layers:
   - Default
   - TransparentFX

@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class CablesScript : MonoBehaviour
 {
-    // Update is called once per frame
-    void Update()
+    public GameObject Lives;
+    public int lives = 3;
+
+    void Start()
     {
-        
+        Lives = GameObject.FindGameObjectWithTag("Lives");
     }
 
     // programar movimiento del objeto cable con las flechas del teclado
@@ -27,8 +29,19 @@ public class CablesScript : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-
         if (other.gameObject.tag == "Tuberia")
+        {
+            lives--;
+            // buscar el primer hijo de Lives y destruirlo en base a la variable lives
+            if(lives >= 0){
+                Destroy(Lives.transform.GetChild(lives).gameObject);
+            }
+        }
+    }
+
+    void Update()
+    {
+        if (lives == 0)
         {
             GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameTimerScript>().StopTimer();
         }

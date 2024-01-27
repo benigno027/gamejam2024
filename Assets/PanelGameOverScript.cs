@@ -15,11 +15,9 @@ public class PanelGameOverScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        
+        Time.timeScale = 1;
     }
 
-    // Update is called once per frame
     void Update()
     {
         MoveImage(image1, UbicionFinal1);
@@ -29,8 +27,6 @@ public class PanelGameOverScript : MonoBehaviour
     }
     void MoveImage(GameObject image , Transform target)
     {
-        // Move our position a step closer to the target.
-
         float step =  movespeed * Time.deltaTime; // calculate distance to move
         image.transform.position = Vector3.MoveTowards(image.transform.position, target.position, step);
         
