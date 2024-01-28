@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Level 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7260576425880427770, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 62e20dff0a03e405d9017776a2b50a9b, type: 3}
     - target: {fileID: 7260576426664554888, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
       propertyPath: panelGameWin
       value: 
