@@ -11,6 +11,8 @@ public class MiniGame1Scripts : MonoBehaviour
     public List<int> IndiceSeleccionados = new List<int>();
     public int [] Recorridos;
 
+    private bool BlockButtons = false;
+
     void Awake()
     {
         Lives = GameObject.FindGameObjectWithTag("Lives");
@@ -44,6 +46,10 @@ public class MiniGame1Scripts : MonoBehaviour
 
     public void ComprobarFoco(int indice)
     {
+        if (BlockButtons)
+        {
+            return;
+        }
         //verificar si el indice existe en el array de recorridos
         int existe = System.Array.IndexOf(Recorridos, indice);
 
@@ -81,7 +87,7 @@ public class MiniGame1Scripts : MonoBehaviour
 
     IEnumerator ButtonSignal()
     {
-        
+        BlockButtons = true;
         IndiceSeleccionados = new List<int>();
 
         for (int i = 0; i < Recorridos.Length; i++)
@@ -94,6 +100,7 @@ public class MiniGame1Scripts : MonoBehaviour
             SetButtonColor(idx, Color.white);
             yield return new WaitForSeconds(0.5f);
         }
+        BlockButtons = false;
     }
 
     void SetButtonColor(int idx, Color color)
