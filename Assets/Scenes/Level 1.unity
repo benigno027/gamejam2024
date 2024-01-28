@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: panelGameWin
       value: 
       objectReference: {fileID: 1066383041}
+    - target: {fileID: 7260576427192696268, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
+      propertyPath: m_text
+      value: Level #1
+      objectReference: {fileID: 0}
     - target: {fileID: 7260576427861465863, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
       propertyPath: m_Name
       value: UIGameOption
