@@ -10,6 +10,8 @@ public class MiniGame1Scripts : MonoBehaviour
     public GameObject[] gameObjectsButtons;
     public List<int> IndiceSeleccionados = new List<int>();
     public int [] Recorridos;
+    public ErrorSonidosScript sonidosScript;
+
 
     private bool BlockButtons = false;
 
@@ -21,6 +23,7 @@ public class MiniGame1Scripts : MonoBehaviour
     void Start()
     {
         IniciarJuego(); 
+        sonidosScript = GameObject.FindGameObjectWithTag("ErrorSonidosScript").GetComponent<ErrorSonidosScript>();
     }
 
     void Update()
@@ -68,6 +71,7 @@ public class MiniGame1Scripts : MonoBehaviour
                 lives--;
                 if (lives >= 0)
                 {
+                    sonidosScript.PlayRandomSound();
                     Destroy(Lives.transform.GetChild(lives).gameObject);
                     StartCoroutine(ButtonSignal());
                 }
@@ -76,6 +80,7 @@ public class MiniGame1Scripts : MonoBehaviour
         else
         {
             Debug.Log("No existe");
+            sonidosScript.PlayRandomSound();
             lives--;
             if (lives >= 0)
             {

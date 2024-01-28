@@ -7,9 +7,12 @@ public class CablesScript : MonoBehaviour
     public GameObject Lives;
     public int lives = 3;
 
+    public ErrorSonidosScript sonidosScript;
+
     void Start()
     {
         Lives = GameObject.FindGameObjectWithTag("Lives");
+        sonidosScript = GameObject.FindGameObjectWithTag("ErrorSonidosScript").GetComponent<ErrorSonidosScript>();
     }
 
     // programar movimiento del objeto cable con las flechas del teclado
@@ -32,6 +35,7 @@ public class CablesScript : MonoBehaviour
         if (other.gameObject.tag == "Tuberia")
         {
             lives--;
+            sonidosScript.PlayRandomSound();
             // buscar el primer hijo de Lives y destruirlo en base a la variable lives
             if(lives >= 0){
                 Destroy(Lives.transform.GetChild(lives).gameObject);
