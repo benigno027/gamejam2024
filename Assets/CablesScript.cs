@@ -8,10 +8,15 @@ public class CablesScript : MonoBehaviour
     public int lives = 3;
 
     public ErrorSonidosScript sonidosScript;
+    public PlayerReactionScript playerReactionScript;
 
-    void Start()
+    void Awake()
     {
         Lives = GameObject.FindGameObjectWithTag("Lives");
+        playerReactionScript = GameObject.FindGameObjectWithTag("PlayerReaction").GetComponent<PlayerReactionScript>();
+    }
+    void Start()
+    {
         sonidosScript = GameObject.FindGameObjectWithTag("ErrorSonidosScript").GetComponent<ErrorSonidosScript>();
     }
 
@@ -38,6 +43,7 @@ public class CablesScript : MonoBehaviour
             sonidosScript.PlayRandomSound();
             // buscar el primer hijo de Lives y destruirlo en base a la variable lives
             if(lives >= 0){
+                playerReactionScript.ChangeSprite();
                 Destroy(Lives.transform.GetChild(lives).gameObject);
             }
         }

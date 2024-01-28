@@ -12,12 +12,15 @@ public class MiniGame1Scripts : MonoBehaviour
     public int [] Recorridos;
     public ErrorSonidosScript sonidosScript;
 
+    public PlayerReactionScript playerReactionScript;
+
 
     private bool BlockButtons = false;
 
     void Awake()
     {
         Lives = GameObject.FindGameObjectWithTag("Lives");
+        playerReactionScript = GameObject.FindGameObjectWithTag("PlayerReaction").GetComponent<PlayerReactionScript>();
     }
 
     void Start()
@@ -71,6 +74,7 @@ public class MiniGame1Scripts : MonoBehaviour
                 lives--;
                 if (lives >= 0)
                 {
+                    playerReactionScript.ChangeSprite();
                     sonidosScript.PlayRandomSound();
                     Destroy(Lives.transform.GetChild(lives).gameObject);
                     StartCoroutine(ButtonSignal());
@@ -84,6 +88,7 @@ public class MiniGame1Scripts : MonoBehaviour
             lives--;
             if (lives >= 0)
             {
+                playerReactionScript.ChangeSprite();
                 Destroy(Lives.transform.GetChild(lives).gameObject);
                 StartCoroutine(ButtonSignal());
             }

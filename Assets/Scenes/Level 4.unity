@@ -1529,9 +1529,13 @@ PrefabInstance:
       propertyPath: m_text
       value: Next
       objectReference: {fileID: 0}
+    - target: {fileID: 4827437984502617050, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7260576426664554888, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
       propertyPath: maxTime
-      value: 35
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 7260576427192696268, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
       propertyPath: m_text
