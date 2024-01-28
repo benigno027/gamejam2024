@@ -1,22 +1,39 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 
 public class MiniGame1Scripts : MonoBehaviour
 {
-    
+    public GameObject canvasGame;
+    public GameObject Lives;
+    public int lives = 3;
     public GameObject[] gameObjectsButtons = new GameObject[9];
-    public int [] IndiceSeleccionados;
+    public List<int> IndiceSeleccionados = new List<int>();
     public int [] Recorridos;
 
     void Start()
     {
-        IndiceSeleccionados = new int[3];
+        Lives = GameObject.FindGameObjectWithTag("Lives");
+        IniciarJuego(); 
+    }
+
+    void Update()
+    {
+        if (lives == 0)
+        {
+            GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameTimerScript>().StopTimer();
+            canvasGame.SetActive(false);
+        }
+    }
+
+    public void IniciarJuego()
+    {
         Recorridos = new int[3];
 
         for (int i = 0; i < Recorridos.Length; i++)
         {
-            Recorridos[i] = UnityEngine.Random.Range(0, gameObjectsButtons.Length) - 1;
+            Recorridos[i] = UnityEngine.Random.Range(0, gameObjectsButtons.Length);
             Debug.Log(Recorridos[i]);
 
         }
@@ -30,15 +47,42 @@ public class MiniGame1Scripts : MonoBehaviour
 
         if(existe != -1){
             Debug.Log("Existe");
-        }
-        else{
+            IndiceSeleccionados.Add(indice);
+
+            // verificar la ultima posicion de IndiceSeleccionados es igual a la ultima posicion de Recorridos
+            if(IndiceSeleccionados[IndiceSeleccionados.Count - 1] == Recorridos[IndiceSeleccionados.Count - 1]){
+                Debug.Log("Correcto");
+                if(IndiceSeleccionados.Count == Recorridos.Length){
+                    Debug.Log("Ganaste");
+                    GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameTimerScript>().WinGame();
+                    canvasGame.SetActive(false);
+                }
+            } else {
+                Debug.Log("Incorrecto");
+                lives--;
+                if (lives >= 0)
+                {
+                    Destroy(Lives.transform.GetChild(lives).gameObject);
+                    StartCoroutine(ButtonSignal());
+                }
+            }
+
+        } else {
             Debug.Log("No existe");
+            lives--;
+            if (lives >= 0)
+            {
+                Destroy(Lives.transform.GetChild(lives).gameObject);
+                StartCoroutine(ButtonSignal());
+            }
         }
     }
 
     IEnumerator ButtonSignal()
     {
         
+        IndiceSeleccionados = new List<int>();
+
         for (int i = 0; i < Recorridos.Length; i++)
         {
             int idx = Recorridos[i];
@@ -61,4 +105,3 @@ public class MiniGame1Scripts : MonoBehaviour
         button.colors = colors;
     }
 }
-

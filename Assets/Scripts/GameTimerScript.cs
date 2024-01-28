@@ -13,6 +13,8 @@ public class GameTimerScript : MonoBehaviour
 
     public GameObject panelGameOver;
 
+    public GameObject panelGameWin;
+
     private bool gameOver = false;
 
     void Awake()
@@ -52,5 +54,12 @@ public class GameTimerScript : MonoBehaviour
         panelGameOver.SetActive(true);
         gameOver = true;
         
+    }
+
+    public void WinGame()
+    {
+        //activar el objeto con el tag "PanelGameWin"
+        panelGameWin.SetActive(true);
+        gameOver = true;
     }
 }
