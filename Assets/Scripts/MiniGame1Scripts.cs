@@ -98,7 +98,6 @@ public class MiniGame1Scripts : MonoBehaviour
     IEnumerator ButtonSignal()
     {
         BlockButtons = true;
-        IndiceSeleccionados = new List<int>();
 
         for (int i = 0; i < Recorridos.Length; i++)
         {
@@ -110,6 +109,10 @@ public class MiniGame1Scripts : MonoBehaviour
             SetButtonColor(idx, Color.white);
             yield return new WaitForSeconds(0.5f);
         }
+
+        
+        IndiceSeleccionados = new List<int>();
+
         BlockButtons = false;
     }
 

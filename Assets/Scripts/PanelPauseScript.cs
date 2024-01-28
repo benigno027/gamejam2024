@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class PanelPauseScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void PauseGame(GameObject panelPause)
     {
-        //detener el tiempo
+        //reanudar el tiempo
         Time.timeScale = 0;
+
+        //activar el panel de pausa
+        panelPause.SetActive(true);
     }
 
     // cargar escena
