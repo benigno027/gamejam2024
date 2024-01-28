@@ -5,18 +5,19 @@ using System.Collections.Generic;
 
 public class MiniGame1Scripts : MonoBehaviour
 {
-    public GameObject canvasGame;
     public GameObject Lives;
     public int lives = 3;
     public GameObject[] gameObjectsButtons;
     public List<int> IndiceSeleccionados = new List<int>();
     public int [] Recorridos;
 
-    void Start()
+    void Awake()
     {
         Lives = GameObject.FindGameObjectWithTag("Lives");
-        gameObjectsButtons = GameObject.FindGameObjectsWithTag("Foco");
-        CargarEventosDeBotones();
+    }
+
+    void Start()
+    {
         IniciarJuego(); 
     }
 
@@ -25,7 +26,6 @@ public class MiniGame1Scripts : MonoBehaviour
         if (lives == 0)
         {
             GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameTimerScript>().StopTimer();
-            canvasGame.SetActive(false);
         }
     }
 
@@ -42,16 +42,6 @@ public class MiniGame1Scripts : MonoBehaviour
         StartCoroutine(ButtonSignal());
     }
 
-    // crear funcion para iteral el arreglo de gameObjectsButtons y asinar el evento OnClick con la funcion ComprobarFoco y pasar el indice como parametro  
-    void CargarEventosDeBotones()
-    {
-        for (int i = 0; i < gameObjectsButtons.Length; i++)
-        {
-            Button button = gameObjectsButtons[i].GetComponent<Button>();
-            button.onClick.AddListener(() => ComprobarFoco(i));
-        }
-    }
-
     public void ComprobarFoco(int indice)
     {
         //verificar si el indice existe en el array de recorridos
@@ -60,14 +50,12 @@ public class MiniGame1Scripts : MonoBehaviour
         if(existe != -1){
             Debug.Log("Existe");
             IndiceSeleccionados.Add(indice);
-
             // verificar la ultima posicion de IndiceSeleccionados es igual a la ultima posicion de Recorridos
             if(IndiceSeleccionados[IndiceSeleccionados.Count - 1] == Recorridos[IndiceSeleccionados.Count - 1]){
                 Debug.Log("Correcto");
                 if(IndiceSeleccionados.Count == Recorridos.Length){
                     Debug.Log("Ganaste");
                     GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameTimerScript>().WinGame();
-                    canvasGame.SetActive(false);
                 }
             } else {
                 Debug.Log("Incorrecto");
@@ -78,8 +66,9 @@ public class MiniGame1Scripts : MonoBehaviour
                     StartCoroutine(ButtonSignal());
                 }
             }
-
-        } else {
+        } 
+        else
+        {
             Debug.Log("No existe");
             lives--;
             if (lives >= 0)
