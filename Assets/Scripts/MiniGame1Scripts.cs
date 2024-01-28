@@ -8,13 +8,15 @@ public class MiniGame1Scripts : MonoBehaviour
     public GameObject canvasGame;
     public GameObject Lives;
     public int lives = 3;
-    public GameObject[] gameObjectsButtons = new GameObject[9];
+    public GameObject[] gameObjectsButtons;
     public List<int> IndiceSeleccionados = new List<int>();
     public int [] Recorridos;
 
     void Start()
     {
         Lives = GameObject.FindGameObjectWithTag("Lives");
+        gameObjectsButtons = GameObject.FindGameObjectsWithTag("Foco");
+        CargarEventosDeBotones();
         IniciarJuego(); 
     }
 
@@ -38,6 +40,16 @@ public class MiniGame1Scripts : MonoBehaviour
 
         }
         StartCoroutine(ButtonSignal());
+    }
+
+    // crear funcion para iteral el arreglo de gameObjectsButtons y asinar el evento OnClick con la funcion ComprobarFoco y pasar el indice como parametro  
+    void CargarEventosDeBotones()
+    {
+        for (int i = 0; i < gameObjectsButtons.Length; i++)
+        {
+            Button button = gameObjectsButtons[i].GetComponent<Button>();
+            button.onClick.AddListener(() => ComprobarFoco(i));
+        }
     }
 
     public void ComprobarFoco(int indice)

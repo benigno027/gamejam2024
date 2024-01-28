@@ -17,10 +17,12 @@ public class GameTimerScript : MonoBehaviour
 
     private bool gameOver = false;
 
+    public TMPro.TextMeshProUGUI levelTextName;
+
     void Awake()
     {
         //buscar gameobject con el tag "TextTimer" TMPro;
-        timerText = GameObject.FindGameObjectWithTag("TextTimer").GetComponent<TMPro.TextMeshProUGUI>();
+        timerText = GameObject.FindGameObjectWithTag("TextTimer").GetComponent<TMPro.TextMeshProUGUI>(); 
     }
 
     // Update is called once per frame
