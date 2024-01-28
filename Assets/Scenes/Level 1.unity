@@ -130,6 +130,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 931433776, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 240
+      objectReference: {fileID: 0}
+    - target: {fileID: 931433776, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 240
+      objectReference: {fileID: 0}
+    - target: {fileID: 931433777, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5e810225ae51642a591481bee973451f, type: 3}
+    - target: {fileID: 1654594763, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 240
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654594763, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 240
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654594764, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 25dd4443563e14c7486cbe184cb917a9, type: 3}
+    - target: {fileID: 1767225056, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 240
+      objectReference: {fileID: 0}
+    - target: {fileID: 1767225056, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 240
+      objectReference: {fileID: 0}
+    - target: {fileID: 1767225057, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e479220128c604f6696bec484f78bab0, type: 3}
     - target: {fileID: 7174301906945588160, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Level 2
@@ -138,6 +174,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 62e20dff0a03e405d9017776a2b50a9b, type: 3}
+    - target: {fileID: 7260576426337670615, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7260576426664554888, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
+      propertyPath: maxTime
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 7260576426664554888, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
       propertyPath: panelGameWin
       value: 
@@ -164,7 +208,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7260576427556371783, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 2.0447083
+      value: 2.0446777
       objectReference: {fileID: 0}
     - target: {fileID: 7260576427861465863, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
       propertyPath: m_Name

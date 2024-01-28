@@ -212,6 +212,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 931433776, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 240
+      objectReference: {fileID: 0}
+    - target: {fileID: 931433776, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 240
+      objectReference: {fileID: 0}
+    - target: {fileID: 931433777, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e5f783c10f58142b69ece136dfb52ee1, type: 3}
+    - target: {fileID: 1654594763, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 240
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654594763, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 240
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654594764, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 681671b29e80e413aaa46486cf159f96, type: 3}
+    - target: {fileID: 1767225056, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 240
+      objectReference: {fileID: 0}
+    - target: {fileID: 1767225056, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 240
+      objectReference: {fileID: 0}
+    - target: {fileID: 1767225057, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7deb9bb3adfe94b4ab3a53d7f976fbf2, type: 3}
     - target: {fileID: 2215121802847840639, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
       propertyPath: m_text
       value: Next
@@ -227,6 +263,10 @@ PrefabInstance:
     - target: {fileID: 7260576426337670615, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7260576426664554888, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
+      propertyPath: maxTime
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7260576426664554888, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
       propertyPath: panelGameWin
