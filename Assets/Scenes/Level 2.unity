@@ -1163,6 +1163,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7260576426664554888, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
+      propertyPath: maxTime
+      value: 35
+      objectReference: {fileID: 0}
     - target: {fileID: 7260576427547657718, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
       propertyPath: m_TagString
       value: Lives

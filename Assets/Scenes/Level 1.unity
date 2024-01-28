@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7260576426664554888, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
+      propertyPath: panelGameWin
+      value: 
+      objectReference: {fileID: 1066383041}
     - target: {fileID: 7260576427861465863, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
       propertyPath: m_Name
       value: UIGameOption
@@ -220,6 +224,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
+--- !u!1 &1066383041 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7260576427556371776, guid: e916333fabe874cf5885a500c5aad82b, type: 3}
+  m_PrefabInstance: {fileID: 836744715}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1105661238
 GameObject:
   m_ObjectHideFlags: 0
